@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from models import Employee
+from .models import Employee
 
 class EmployeeSerializer(serializers.Serializer):
     eno = serializers.IntegerField()
-    ename = serializers.CharField(max_lenght = 20)
+    ename = serializers.CharField(max_length=20)
     esal = serializers.FloatField()
 
     def create(self, validated_data):
